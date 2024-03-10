@@ -15,18 +15,25 @@ const iconMap = {
 };
 
 export default async function CardWrapper() {
-  const totalPaidInvoices = await fetchCardData().then(
-    (data) => data.totalPaidInvoices,
-  );
-  const totalPendingInvoices = await fetchCardData().then(
-    (data) => data.totalPendingInvoices,
-  );
-  const numberOfInvoices = await fetchCardData().then(
-    (data) => data.numberOfInvoices,
-  );
-  const numberOfCustomers = await fetchCardData().then(
-    (data) => data.numberOfCustomers,
-  );
+  const {
+    numberOfInvoices,
+    numberOfCustomers,
+    totalPaidInvoices,
+    totalPendingInvoices,
+  } = await fetchCardData();
+
+  // const totalPaidInvoices = await fetchCardData().then(
+  //   (data) => data.totalPaidInvoices,
+  // );
+  // const totalPendingInvoices = await fetchCardData().then(
+  //   (data) => data.totalPendingInvoices,
+  // );
+  // const numberOfInvoices = await fetchCardData().then(
+  //   (data) => data.numberOfInvoices,
+  // );
+  // const numberOfCustomers = await fetchCardData().then(
+  //   (data) => data.numberOfCustomers,
+  // );
   return (
     <>
       {/* NOTE: comment in this code when you get to this point in the course */}
